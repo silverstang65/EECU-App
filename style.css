@@ -44,6 +44,8 @@
     grid-template-rows: repeat(2, 1fr);
     max-height: 600px;
     overflow: hidden;
+    gap: 1.5rem;
+    margin-top: 1rem;
   }
   nav{
     content: '';
@@ -58,8 +60,9 @@
     height:10vh; 
     background: var(--nav);
     border-radius: 4px;
-    transform: translateY(-50%);
+    transform: none;
     z-index: 1;
+    top: 0;
   }
   
   
@@ -164,24 +167,20 @@ nav>div >a {
     box-shadow: var(--selected);
   }
   
-  .career p {
-    margin: 0;
-  }
   
 
   .Continue {
-    background-color: var(--next);
-    color: white;
-    text-decoration: none;
-    border: none;
-    padding: 1.2rem 3rem;
-    font-size: 1.5rem;
-    font-weight: 400;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: all 0.3s;
-    height: 50px;
+     background-color: var(--next);
+  color: white;
+  text-decoration: none;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 15px;
+  cursor: pointer;display: inline-block;
   }
+
+
 
   .Continue:hover {
     background-color: rgb(34, 75, 189);
@@ -191,31 +190,32 @@ nav>div >a {
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
+    margin-left: 90px;
+    margin-right: 50px;
   }
 
-#career-selection {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px;
-    gap: 35px;
-    place-items: center;
-    margin-top: 100px;
-}
 
 
 .career {
-width: 411px;
-height: 256px;
-border:none;
-border-radius: 15px;
-background-color: var(--primary);
-box-shadow: 0 4px  rgb(234, 234, 234) ;
+width: 200px;
+  height: 200px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--primary);
+  box-shadow: 0 4px rgb(234, 234, 234);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.3rem;
 }
 
+
 .career p {
-    color: black;
-    font-size: 24px;
-    font-weight:bold;
+    margin: 0;
+    line-height: 1.2;
+
 }
 
 .career> p:nth-child(2) {
@@ -227,67 +227,67 @@ button:hover {
 background-color: #6297D4;
 }
 
-.bottom{
-  display:flex;
-  width:99vw;
-  justify-content:space-around;
-  align-items:center;
-  height:10vh;
+.bottom {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .selected-career{
   font-size:31px;
 }
 
-#tax-breakdown{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap:5px;
-  background-color:#B3CDEB;
-  width: 700px;
-  text-align: left;
-  margin: 300px;
-  margin-bottom:30px;
-  margin-left: 400px;
-  border-radius: 20px;
-  height: 450px;
+#tax-breakdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: #B3CDEB;
+    width: 48%;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin: 0;
 }
 
 #federal {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  gap: 5px;
-  background-color:#B3CDEB;
-  width: 600px;
-  text-align: left;
-  margin: 300px;
-  margin-bottom:30px;
-  margin-left: 00px;
-  border-radius: 20px;
-  
-  height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #B3CDEB;
+    width: 48%;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin: 0;
 }
 
 
 #container {
   display: flex;
-
-  overflow-x: hidden;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5rem auto 0 auto;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .red-text {
-  display:flex;
-  color: #C90000;
-  padding-left: 450px;
-  margin-left: 0;
+    color: #C90000;
+    padding-left: 0;
+    margin-left: auto;
+    display: inline;
 }
 
 h3 {
 font-size: 32px;
+color: white;
 }
 
 #annuals {
@@ -310,10 +310,6 @@ font-size: 32px;
   width: 70vw;
 }
 
-.calc-header {
-  display: flex;
-  justify-content: space-around;
-}
 
 .money-number {
 display: flex;
@@ -357,12 +353,22 @@ background-color: var(--current-page)
 }
 
 #tax-calc {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--current-page);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
 }
-.calc-header {
-  display: flex;
 
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
 .money-number {
@@ -380,25 +386,8 @@ flex-direction: column;
   color: white;
 }
 
-#gross {
-  color: white;
-
-}
-
-#taxes {
-  color: red;
-}
-
-#net {
-color: white;
-}
-
-#take-home {
-  color: green;
-}
-
 #progress-2 {
-  background-color: var(--current-page);
+  background-color: var(--primary);
 }
 
 #progress-3 {
@@ -410,16 +399,24 @@ background-color: var(--primary);
 }
 
 #monthly-budget {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 180px 1fr;
+  gap: 0 1.5rem;
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1 rem 1.5rem;
+  align-items: start;
+  justify-content: none;
+  flex-direction: none;
+
 
 }
 
 .budget-input {
   
   background-color: var(--budget-input);
-  border: var(--budget-input);
+  border: none;
   border-radius: 15px;
   width: 22vw;
   height: 6vh;
@@ -438,16 +435,49 @@ background-color: var(--primary);
 #payment-2 {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   justify-content: flex-start;
+}
+
+#payment-2 form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#payment-2 h3 {
+ font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 0.5rem 0 0.15rem 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* this is my first time trying !important (thx w3schools) ima put them into all the children since i have some overlapping codes and see how this goes :p */
+
+#payment-2 form h3:first-child {
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 0.5rem 0 0.15rem 0 !important;
+  line-height: 1.3 !important;
 }
 
 #summary {
   display: flex;
   flex-direction: column;
-
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2.5rem;
 }
 
 
+.bottom .return { 
+  font-size: 1rem;
+  margin: 0;
+  color: black;
+  text-decoration: none;
+}
 
 /* Targets devices between 320px and 480px */
 @media (min-width: 380px) and (max-width: 440px) {
@@ -478,8 +508,31 @@ background-color: var(--primary);
   #payment-1 {
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
   }
+  #payment-1 form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #payment-1 h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: black;
+  margin: 0.4 rem 0 0.15rem;
+  line-height: 1.3;
+}
+
+#payment-1 form h3:first-child {
+ font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 0.5rem 0 0.15rem 0 !important;
+  line-height: 1.3 !important;
+}
+
   p {
     font-size: 20px;
   }
@@ -489,4 +542,220 @@ background-color:#fff;
   .continue {
     font-size: clamp(0.8rem, 2vw, 2rem)
   }
+}
+
+#title {
+  text-align: center;
+  padding-top: 12vh;
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+#title h2.desk {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 auto 0.5rem auto;
+}
+
+#title h3.desk {
+  font-size: 1rem;
+  font-weight: 400;
+  color: darkgrey;
+  margin: 0;
+}
+
+#payment-1 .budget-input,
+#payment-2 .budget-input {
+  font-family: 'Inria Serif', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+h3 {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important ;
+  margin: 0.5rem 0 0.15rem !important;
+}
+
+#results-page { 
+ display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 13vh;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+#results-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: black;
+  margin: 0 0 1rem 0;
+}
+
+#balance-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #B3CDEB;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+#balance-left {
+  display: flex;
+  flex-direction: column;
+}
+
+#balance-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 5px;
+}
+
+#balance-status {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+#balance-amt.surplus {
+  color: #54914f;
+}
+
+#balance-amt.shortfall {
+  color: #c90000;
+}
+
+#balance-amt {
+   font-size: 2.5rem;
+  font-weight: 800;
+}
+
+#results-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  background-color: #B3CDEB;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+  align-items: center;
+}
+
+#chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#chart-wrap {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+#chart-wrap canvas {
+  width: 180px;
+  height: 180px;
+}
+
+#chart-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+
+#chart-amount {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  line-height: 1.2;
+}
+
+#chart-sub {
+    display: block;
+    font-size: 0.65rem;
+    color: #666;
+}
+ 
+#wise-tip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+ 
+#tip-heading {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-decoration: underline;
+    margin-bottom: 0.6rem;
+}
+ 
+#tip-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+}
+ 
+#tip-text.surplus-tip {
+    text-decoration: underline;
+    color: #1a1a1a;
+}
+ 
+#tip-text.shortfall-tip {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+ 
+#results-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+#results-footer .return {
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    text-decoration: none;
+    margin-left: 0;
+}
+ 
+#results-footer .return:hover {
+    text-decoration: underline;
+}
+ 
+#results-footer .Continue {
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    line-height: normal;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    display: inline-block;
+    text-align: center;
+}
+ 
+#progress-4 {
+    background-color: #B3CDEB !important;
+}
+#progress-4 .page4 {
+    color: #000000 !important;
 }

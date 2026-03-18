@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Tax Breakdown</title>
 </head>
 <body>
+  
+    <nav class="nav-bar">
+        <img src="Logo.png.png" alt="EECU Logo">
+    <div id="progress-1"> 
+                <a href="index.html" class="page1">1</a><p></p>
+                
+    </div>
+    <p>Choose Career</p>
+    <div id="progress-2">
+                <a href="tax.html" class="page2">2</a><p></p>
+    </div>
+    <p>Tax Breakdown</p>
+    <div id="progress-3">
+                <a href="budget.html" class="page3">3</a><p></p>
+    </div>
+    <p>Monthly Budget</p>
+    <div id="progress-4">
+                <a href="results.html" class="page4">4</a><p></p>
+    </div>
+    <p>Results</p>
+    </nav>   
+    <div id="results-page">
+ 
+        <h1 id="results-title">Your Monthly Budget Results</h1>
+ 
+        <div id="balance-box">
+            <div id="balance-left">
+                <span id="balance-label">Monthly Balance:</span>
+                <span id="balance-status">–</span>
+            </div>
+            <span id="balance-amt">–</span>
+        </div>
+ 
+        <div id="results-body">
+ 
+            <div id="chart-container">
+                <p id="chart-title">Budget Breakdown</p>
+                <div id="chart-wrap">
+                    <canvas id="budgetChart" width="180" height="180"></canvas>
+                    <div id="chart-center">
+                        <span id="chart-amount">–</span>
+                        <span id="chart-sub">monthly net</span>
+                    </div>
+                </div>
+            </div>
+ 
+            <div id="wise-tip">
+                <h3 id="tip-heading">Wise-Up Tip: 💡</h3>
+                <p id="tip-text"></p>
+            </div>
+ 
+        </div>
+ 
+        <div id="results-footer">
+            <a href="budget.html" class="return">Back to Monthly Budget</a>
+            <a href="tax.html" class="Continue">Continue to Tax Breakdown</a>
+        </div>
+ 
+    </div>
     
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

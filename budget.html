@@ -7,11 +7,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Gabarito:wght@400..900&family=Gantari:ital,wght@0,100..900;1,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
         </style>
-    <title>Document</title>
+    <title>Monthly Budget</title>
 </head>
 <body>
     <nav class="nav-bar">
-        <img src="images/Logo.png.png" alt="EECU Logo">
+        <img src="Logo.png.png" alt="EECU Logo">
     <div id="progress-1"> 
                 <a href="index.html" class="page1">1</a><p></p>
                 
@@ -28,9 +28,12 @@
     <div id="progress-4">
                 <a href="results.html" class="page4">4</a><p></p>
     </div>
-    <p>results</p>
+    <p>Results</p>
 
 </nav>    
+
+<div id="budget-page">
+
 
 <section id="title">
     <h2 class="desk">Build your monthly budget</h2>
@@ -53,7 +56,7 @@
     <h3>Essentials</h3>
     
     <input type="text" placeholder="$0" class="budget-input">
-    <h3>Grocerries</h3>
+    <h3>Groceries</h3>
     <input type="text" placeholder="$0" class="budget-input">
     <h3>Insurance</h3>
     <input type="text" placeholder="$0" class="budget-input">
@@ -64,7 +67,8 @@
 
     <section id="summary">
           <div>
-            <p>H</p>
+           <span id="remaining-label">Remaining:</span>
+           <span id="remaining-value">$0</span>
           </div>
     </section>
 
@@ -72,7 +76,7 @@
        
         <form>
             <h3>Lifestyle</h3>
-            <h3>Dinning</h3>
+            <h3>Dining</h3>
             <input type="text" placeholder="$0" class="budget-input">
             <h3>Gym</h3>
             <input type="text" placeholder="$0" class="budget-input">
@@ -83,9 +87,15 @@
             <input type="text" placeholder="$0" class="budget-input">
             <h3>Retirement</h3>
             <input type="text" placeholder="$0" class="budget-input">
+            <a href="results.html" class="Continue">See My Results</a>
         </form>
         
     </section>
 </main>
+<script src="app.js"></script>
+<div class="bottom">
+    <a href="tax.html" class="return">Back to Tax Breakdown</a>
+</div>
+<script src="budget.js"></script>
 </body>
 </html>

@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
     <title>Tax Breakdown</title>
 </head>
 <body>
   
     <nav class="nav-bar">
-        <img src="images/Logo.png.png" alt="EECU Logo">
+        <img src="Logo.png.png" alt="EECU Logo">
     <div id="progress-1"> 
                 <a href="index.html" class="page1">1</a><p></p>
                 
@@ -34,51 +33,44 @@
 
 <main>
     <h1 class="desk">Your 2026 Tax Breakdown</h1>
-    <h1 class="mobileOnly">Tax breakdown</h1>
-    <h2>View the tax breakdown for your selected career.</h2>
-<section id="tax-calc">
-    <div class="calc-header">
-<h3 class="monthly-budget-header">Gross Annual</h3>
-<h3 class="monthly-budget-header">Total Taxes</h3>
-<h3 class="monthly-budget-header">Net Annual</h3>
-<h3 class="monthly-budget-header">Monthly Take Home</h3>
-</span>
-<span class=money-number >
-    <h3 id="gross">$85,000</p>
-    <h3 id="taxes">-$23,121</p>
-    <h3 id="net">$61,879</p>
-    <h3 id="take-home">$5,157</h3>
-</span>
+    <h2>Before you spend a dime, Uncle Sam gets his share. Here's what he'll take:</h2>
 
-
-
-</section>
+    <section id="tax-calc">
+        <div class="calc-header">
+            <h3 class="monthly-budget-header">Gross Annual: <span id="gross-an">0</span></h3>
+            <h3 class="monthly-budget-header">Total Taxes: <span id="total-taxes">0</span></h3>
+            <h3 class="monthly-budget-header">Net Annual: <span id="net-an">0</span></h3>
+            <h3 class="monthly-budget-header">Monthly Take Home: <span id="month-take">0</span></h3>
+        </div>
+    </section>
 
     <div id="container">
         <section id="tax-breakdown">
             <h3>Tax Line Items</h3>
-            <p>Federal Income Tax: <span class="red-text">-$13,618.00</span></p>
-            <p>State Tax: <span class="red-text">-$3,400.00</span></p>
-            <p>Social Security: <span class="red-text">-$5,270.00</span></p>
-            <p>Medicare: <span class="red-text">-$1,232.50</span></p>
-            <p>Total Tax Burden: <span class="red-text">-$23,120.50</span></p>
+            <p>Federal Income Tax <span id="fedtax" class="red-text">-$0</span></p>
+            <p>State Tax <span id="statetax" class="red-text">-$0</span></p>
+            <p>Social Security <span id="socialsec" class="red-text">-$0</span></p>
+            <p>Medicare <span id="medicare" class="red-text">-$0</span></p>
+            <p>Total Tax Burden <span id="totaldeduc" class="red-text">-$0</span></p>
         </section>
-    
-    
-            <section id="federal">
-                <h3>Federal Progressive Brackets</h3>
-                <div id="list"> 
-                   <span id="tax-rules">
-                    <p class="tax-num">$0-$12,400</p>
-                    <P class="tax-num">$12,401-$50,400</P>
-                    <p class="tax-num">$50,401-$68,900</p>
-                   </span>
-                </div>
-            </section>
+
+        <section id="federal">
+            <h3>Federal Progressive Brackets</h3>
+            <p id="fed-b1">$0 - $12,400</p>
+            <p id="fed-b2">$12,401 - $50,400</p>
+            <p id="fed-b3">$50,401 - $68,900</p>
+        </section>
     </div>
-    <footer class="bottom">
-<a href="index.html" class="return">Back to Choose Career</a>
-        <a href="budget.html" class="Continue">Continue to Monthly Budget</a>
-    </footer>
+
+
+</div>
+</main>
+
+<footer class="bottom">
+    <a href="index.html" class="return">Back to Choose Career</a>
+    <a href="budget.html" class="Continue">Continue to Monthly Budget</a>
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
